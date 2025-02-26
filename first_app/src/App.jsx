@@ -1,6 +1,7 @@
 import "./App.css";
 import ProductTab from "./ProductTab.jsx";
 import Counter from "../Counter.jsx";
+import LikeButton from "../LikeButton.jsx";
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
             <ProductTab />
             <h1>States in React</h1>
             <Counter />
+            <LikeButton />
         </>
     );
 }
