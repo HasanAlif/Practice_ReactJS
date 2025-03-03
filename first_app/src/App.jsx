@@ -1,18 +1,14 @@
 import "./App.css";
-import ProductTab from "./ProductTab.jsx";
-import Counter from "../Counter.jsx";
-import LikeButton from "../LikeButton.jsx";
+import LoduBoard from "./LudoBoard";
 
 function App() {
     return (
         <>
-            <h1>BlockBuster Deals , Shop Now</h1>
-            <ProductTab />
-            <h1>States in React</h1>
-            <Counter />
-            <LikeButton />
+            <h1>Ludo Game</h1>
+            <LoduBoard />
         </>
     );
 }
 
 export default App;
+
