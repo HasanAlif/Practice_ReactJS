@@ -1,14 +1,20 @@
 import "./App.css";
-import LoduBoard from "./LudoBoard";
-import Card from "./components/Card";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Tailwind from "./components/Tailwind";
+// import LoduBoard from "./LudoBoard";
+// import Card from "./components/Card";
+// import Footer from "./components/Footer";
+// import Navbar from "./components/Navbar";
+
 
 
 function App() {
+
+    
+    
+
     return (
         <>
-            <Navbar />
+            {/* <Navbar />
             <div className="cards">
                 <Card title="Card-1" Description="This is Card-1"/>
                 <Card title="Card-2" Description="This is Card-2"/>
@@ -17,7 +23,12 @@ function App() {
                 <Card title="Card-5" Description="This is Card-5"/>
             </div>
             <LoduBoard />
-            <Footer />
+            <Footer /> */}
+
+        <Tailwind />
+
+
+            
         </>
     );
 }
