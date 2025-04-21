@@ -1,27 +1,8 @@
 import { CORE_CONCEPTS } from "./data.js";
+import Header from "./components/Header.jsx";
+import CoreConcept from "./components/CoreConcept.jsx";
+import TabButton from "./components/TabButton.jsx";
 
-function Header() {
-  return (
-    <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        Fundamental React concepts you will need for almost any app you are
-        going to build!
-      </p>
-    </header>
-  );
-}
-
-  function CoreConcept(props) {
-    return(
-      <li>
-        <img src={props.image} alt= {props.title} />
-        <h3>{props.title}</h3>
-        <p>{props.decription}</p>
-      </li>
-    )
-  }
 
 function App() {
   return (
@@ -32,26 +13,20 @@ function App() {
           <h2>Core Concepts</h2>
           <ul>
               <CoreConcept
-                title={CORE_CONCEPTS[0].title}
-                decription={CORE_CONCEPTS[0].description}
-                image={CORE_CONCEPTS[0].image}
-              />
+              {...CORE_CONCEPTS[0]} />
               <CoreConcept
-                title={CORE_CONCEPTS[1].title}
-                decription={CORE_CONCEPTS[1].description}
-                image={CORE_CONCEPTS[1].image}
-              />
+              {...CORE_CONCEPTS[1]} />
               <CoreConcept
-                title={CORE_CONCEPTS[2].title}
-                decription={CORE_CONCEPTS[2].description}
-                image={CORE_CONCEPTS[2].image}
-              />
+              {...CORE_CONCEPTS[2]} />
               <CoreConcept
-                title={CORE_CONCEPTS[3].title}
-                decription={CORE_CONCEPTS[3].description}
-                image={CORE_CONCEPTS[3].image}
-              />
+              {...CORE_CONCEPTS[3]} />
           </ul>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton>Components</TabButton>
+          </menu>
         </section>
       </main>
     </div>
