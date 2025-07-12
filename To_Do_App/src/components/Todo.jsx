@@ -1,6 +1,11 @@
 
 const Todo = (props) => {
-  const { title, id, desc } = props.todo;
+  const { title, desc } = props.todo;
+  const { id } = props;
+
+  const handleClick = (id) => {
+    props.onRemoveTodo(id);
+  }
   return (
     <article className="bg-[#222] m-[0.5rem] p-[0.5rem] flex justify-between items-center rounded-lg border border-gray-600 hover:bg-[#111]">
       <div>
@@ -8,7 +13,7 @@ const Todo = (props) => {
         <p className="opacity-70">{desc}</p>
       </div>
       <div>
-        <button className=" bg-red-400 rounded-lg p-[0.5rem] hover:bg-red-700 hover:text-white transition-colors duration-300 cursor-pointer">
+        <button className=" bg-red-400 rounded-lg p-[0.5rem] hover:bg-red-700 hover:text-white transition-colors duration-300 cursor-pointer" onClick={()=>{handleClick(id);}}>
             <i className="fa fa-trash fa-2x"></i>
         </button>
       </div>
