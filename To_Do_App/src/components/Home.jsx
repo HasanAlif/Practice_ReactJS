@@ -12,11 +12,16 @@ const Home = () => {
     setTodos((prevTodos) => [...prevTodos, {id: uuidv4() ,todo}]);
   }
 
+  const handleRemoveTodo = (id) => {
+    const filteredTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(filteredTodos);
+  }
+
   return (
     <div className="container flex flex-col items-center justify-center min-h-screen bg-gray-400">
       <h1 className="text-4xl font-bold mb-4 text-white">TO DO APP</h1>
       <NewTodo onAddTodo={handleTodo} />
-      <Todos todos={todos} />
+      <Todos todos={todos} onRemoveTodo={handleRemoveTodo} />
     </div>
   );
 };
