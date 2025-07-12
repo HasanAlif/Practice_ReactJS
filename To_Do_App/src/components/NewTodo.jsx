@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const NewTodo = () => {
+const NewTodo = (props) => {
   const [todo, setTodo] = useState({ title: "", desc: "" });
 
   const { title, desc } = todo;
@@ -16,9 +16,7 @@ const NewTodo = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const title = event.target.title.value;
-    const desc = event.target.desc.value;
-    console.log({ title, desc });
+    props.onAddTodo(todo);
     setTodo({ title: "", desc: "" });
   };
   return (
